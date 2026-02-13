@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery | Prime Restaurant &amp; Banquet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0B0F1A",
+                        "card-dark": "#111827",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Work Sans", sans-serif;
+        }
+        .masonry-grid {
+            columns: 1;
+        }
+        @media (min-width: 640px) { .masonry-grid { columns: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { columns: 3; } }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hover-zoom:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 font-display transition-colors duration-300">
+<!-- Top Navigation Bar (Consistent with Screen 15) -->
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/95 backdrop-blur-md px-6 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+<h2 class="text-white text-xl font-bold tracking-tight">Prime Restaurant</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="index.html">Home</a>
+<a class="text-white text-sm font-medium border-b-2 border-primary pb-1" href="gallery.html">Gallery</a>
+<a class="text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="menu.html">Menu</a>
+<a class="text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="booking.html">Events</a>
+<a class="text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="contact.html">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center bg-card-dark border border-white/10 rounded-lg px-3 py-1.5">
+<span class="material-symbols-outlined text-gray-400 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-white placeholder:text-gray-500 w-32 lg:w-48" placeholder="Search gallery..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-5 py-2 rounded-lg text-sm font-bold transition-all transform active:scale-95">
+                    Book a Table
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[60vh] min-h-[400px] flex flex-col justify-center items-center overflow-hidden">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover" data-alt="Cinematic luxury restaurant interior with gold accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXMNDu8ftjIIWQVUJ4Mbyv3lgl8HhiZLRA7bGD82HVAK7L2v_S0fqwgauJXkYUmsxdwSWOHpnH-Y5QfB4ZSD9NrrV9na_-wfIrZquhmJCnIGcCCKWfVnj8rmODFK7GTwEW-brgEQ8yqjSXkeXkqPMg5O6X-mRrioPPcwCVs214LsNSziRPnEp5wR8cq-eDT9IQ-SNCLsL4g7Vl4y_6Zc1NnPfGbSPlyaesWxN0mDFLuQXi-7ePam9bWFZdcwzE9UIjztbHBTrLxOD8"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background-dark/80 via-background-dark/40 to-background-dark"></div>
+</div>
+<div class="relative z-10 text-center space-y-4">
+<nav class="flex justify-center items-center gap-2 text-primary/80 text-sm font-medium mb-2">
+<a class="hover:text-primary" href="index.html">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-white">Gallery</span>
+</nav>
+<h1 class="text-5xl md:text-7xl font-bold text-white tracking-tighter">Our Gallery</h1>
+<p class="text-gray-300 max-w-xl mx-auto text-lg font-light">Explore the visual journey of taste, luxury, and unforgettable moments.</p>
+</div>
+</section>
+<!-- Filter Navigation -->
+<section class="py-12 px-6 lg:px-20 bg-background-dark">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-wrap justify-center gap-3">
+<button class="px-6 py-2 rounded-full border border-primary bg-primary text-background-dark font-semibold text-sm transition-all">All</button>
+<button class="px-6 py-2 rounded-full border border-primary/30 hover:border-primary text-gray-300 hover:text-primary font-medium text-sm transition-all">Restaurant Interior</button>
+<button class="px-6 py-2 rounded-full border border-primary/30 hover:border-primary text-gray-300 hover:text-primary font-medium text-sm transition-all">Dining Area</button>
+<button class="px-6 py-2 rounded-full border border-primary/30 hover:border-primary text-gray-300 hover:text-primary font-medium text-sm transition-all">Food &amp; Dishes</button>
+<button class="px-6 py-2 rounded-full border border-primary/30 hover:border-primary text-gray-300 hover:text-primary font-medium text-sm transition-all">Banquet Hall</button>
+<button class="px-6 py-2 rounded-full border border-primary/30 hover:border-primary text-gray-300 hover:text-primary font-medium text-sm transition-all">Events</button>
+<button class="px-6 py-2 rounded-full border border-primary/30 hover:border-primary text-gray-300 hover:text-primary font-medium text-sm transition-all">Live Music</button>
+<button class="px-6 py-2 rounded-full border border-primary/30 hover:border-primary text-gray-300 hover:text-primary font-medium text-sm transition-all">Special Moments</button>
+</div>
+</div>
+</section>
+<!-- Masonry Grid -->
+<section class="py-12 px-6 lg:px-20 bg-background-dark">
+<div class="max-w-7xl mx-auto">
+<div class="masonry-grid gap-6">
+<!-- Item 1 -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-card-dark shadow-2xl hover-zoom cursor-pointer">
+<img class="w-full h-auto transition-transform duration-500" data-alt="Gourmet plated dish with edible flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD5lVQJfoMqYEltbcO_svzMx3_oOY3qCSY_zWpWiIIHF5cxNqp9fU8KCNVexjSjAdETnzpQG9w6pEwug4xUnf68L3jJZH8DEtaqxXNyKJeAJLJF7y2Kr4jSpN3Ffj2T-Yi3BLyfkae1lkE_KI4spdkM1-2jTMlts9dYPYZKW6BllgwMu-nlmDuRszNisBJqYrSVcGKfeXYgTu5U01M6qJOxJ1ttJFMsYpialWKb2j3xnUzgQIgrHIh-ZcCQe0-Deg6h3Rjo4qTI8Hh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Food &amp; Dishes</span>
+<h3 class="text-white text-xl font-bold">Signature Sea Bass</h3>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-card-dark shadow-2xl hover-zoom cursor-pointer">
+<img class="w-full h-auto transition-transform duration-500" data-alt="Luxury banquet hall setup with golden chandeliers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCasi4ARXI5k81d8ypcUT5sOipeSnfczJu--1YSVR2uZ6gku5veglKdHvS7y_6nOdpp3sbnU2RSURgGKrb2LHytzlKnSFtjH3VAgz9dPz1zHVkXhg6FVZlqtxMGPxJGFoGXLwCiqxIJoA8pn8DixJQXcayGWoylBybTpA-fBvuyn0oJWcpnJNeu5q4BPkQxYqoZsPKfx0L6dD23SJgEWLAKVWEaIYywO3V84qvJ2GK_3z89gl5WCZAM59mQFe6ldm8nnETjN7wFvpe"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Banquet Hall</span>
+<h3 class="text-white text-xl font-bold">The Grand Ballroom</h3>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-card-dark shadow-2xl hover-zoom cursor-pointer">
+<img class="w-full h-auto transition-transform duration-500" data-alt="Cozy dining area with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI2vbP6Ofwwsi1SnBoMDpSIpTwyA_AQrRUqdq6LeHgDsH4yqLj80mNcnP3oLUcyrTI4F4jpHikQNNR-uwX44ZdJGOvD-BD-f8jVpbuDvliRApgylr8KRlqqm3Ze0qTOG8A7s6XxAml8ACXF76YbN1_kazBj89NSlGqV-ieypZXal9W8CmexUHq2z_v89MQ5CCAuRcxcNZ-wuu7oA88SNmM_CEArka9-0flbM4FQagV7pvy424blP_s-rrZRsSmRlgfr8szMwXj-TDN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Interior</span>
+<h3 class="text-white text-xl font-bold">Private Booths</h3>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-card-dark shadow-2xl hover-zoom cursor-pointer">
+<img class="w-full h-auto transition-transform duration-500" data-alt="Craft cocktails at the bar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLcC4Dq9H4LYmbGq0v5wcPT0WPt2lkWyRPFojX7JAD5VkFRycGiRuz0REOYCpAEhekryl5rUuE45A4Qb1PavHLRoypnZNlIddAhfko65nE5QWFZj468H_t6y5EF4S3BWraU3EHnhiOEBMaij3LPWySFjIji7SgmjxShSxQjgSd_NEmOV0baBdYfHe_P9OdaTKMecdfKJ20NzpxBrHOcIGRKEOPPqWjliQat3uN7jKFCYGF5eLfgXwsMKah0nYQnF1bVLiqsDZLvph7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Drinks</span>
+<h3 class="text-white text-xl font-bold">Mixology Art</h3>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-card-dark shadow-2xl hover-zoom cursor-pointer">
+<img class="w-full h-auto transition-transform duration-500" data-alt="Live jazz performance with piano" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUfjldi7nqAz-62S34IRl5IKQEbZeNsbWSWj728D1bVQQpQHBGquASrPLXUYd7YlhIi3AKagkTdkk4hkHGjmD_2NMBOceFlMpJ7MTxy0Ry9WlEFTKrMN05uGxxIPkuLNFNs8YNcG5w6Z2El8Cieynd74o2BAD42krNwQdqaBTVbYrz1nM0D4wMV6geV-Qp2HctUef1EXx0IbMNzbhon7V5wOXyTxWawi4OHM1VvFvkC17S0FbrePS37jO-lSBRZ4-Xbgcb7JKKE14A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Live Music</span>
+<h3 class="text-white text-xl font-bold">Evening Jazz</h3>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-card-dark shadow-2xl hover-zoom cursor-pointer">
+<img class="w-full h-auto transition-transform duration-500" data-alt="Wedding reception decoration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPo2yE3UY5iDO3SPBZGbOef7Vt5Zpa2PeX6BpIBc4-hdqySzmBx7QTwC3blI40tkx_5KBK0w_tC8wRkhMN3cNpw62rf3-fKJfBX9Jy9mUezqgX-g0feDqnzqrR2sgKNS1ZZeslchEDtPeoavK1ElgN4onBqPeD6H96dKp9pTHvk74HV07P9tljzW8LgeBWfmY9_a_fO-g4MKAMs53kdYDjTrF5FNJWOPOXRTW0nsZNr-KGFCHimmMzEOKMaNtgSl2YQX14aVo_UlC0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Events</span>
+<h3 class="text-white text-xl font-bold">Wedding Reception</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Showcase Section -->
+<section class="py-24 px-6 lg:px-20 bg-card-dark/30">
+<div class="max-w-5xl mx-auto text-center space-y-12">
+<div class="space-y-4">
+<h2 class="text-4xl font-bold text-white tracking-tight">Experience the Ambience</h2>
+<p class="text-gray-400 max-w-2xl mx-auto">Take a virtual step inside our world where every detail is crafted for your sensory delight.</p>
+</div>
+<div class="relative group aspect-video rounded-xl overflow-hidden shadow-2xl border border-white/5">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" data-alt="Atmospheric video preview of restaurant dining hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDONSAvFdzJrZq4_h9j-vzDJsni4CfIFVTxFipofuZmUGaWjl-mqZiXb0vjHjmpdGQhyv7_HoFLddHHysR58MxIxxmDn18oqHPEhJisrVjawjCuHXG-PcyvsGfnzleEF5UtXv-LEWWy2zfOoOROEenooDqHTRfCcd3V4Lea7_bqPYFGz5zTuwC6tQl6WErXDfowCb91QshtibHNeAnwL5q-NDDrum-bc1YCfUhKG9RfHRMqhSdw5WUsI1U3QEsx5RiL7ujy_rC-2eSd"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<button class="w-20 h-20 bg-primary text-background-dark rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(212,175,53,0.4)] hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl leading-none ml-1">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Instagram Style Social Feed -->
+<section class="py-24 px-6 lg:px-20 bg-background-dark">
+<div class="max-w-7xl mx-auto space-y-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<span class="text-primary font-bold uppercase tracking-widest text-xs">Stay Connected</span>
+<h2 class="text-3xl font-bold text-white tracking-tight">Follow Our Journey</h2>
+</div>
+<a class="text-primary hover:text-white flex items-center gap-2 font-medium transition-colors" href="#">
+                        @PrimeRestaurant.Social
+                        <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="aspect-square relative group overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Instagram post showing decadent dessert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMSMk6--CFoQzhyW3cjCG0NsIsMXh8iEqjARFFK2Tz6sb3B758jwPg04cz-VL-QEqfL1a-MfMcwjgu0NrV04P9iL-lIgvPOU509kFzi-gU-571jMzcI6mFCjcJNgbsU6en4UxbAbdLh-ZHS5rE5fBDQECkJu8NNzFijHdje4Kod7UP0Pgvp59y9COZ2LwBriJv0-AOOAAZ-ebH_JIKE1fEuZTuobZ4UlbH60PsI-Qa60YgRgf2qlVb5e7Hc5i95pGVqJPssK_f73RA"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="aspect-square relative group overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Instagram post showing wine pouring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzmUdJj-2_SEJomIP2IvHaPVJ4sCxGL4i-u4bh0xcSmNyh9TXbKKL3XcHDmXGmicYXXcOCdYqLzMJKuUpuQ6PrY9hYvQoFt2-Rd8W07SxOWlL_MS_ZRzwzFFm3h4yzR5cEE5oREA4WLle3NwlW-8ZGpaG2BduK_FMp4yFdd9fcqSemgKihG6tPyTF-YyfJUUKvw0IgFD1prz0b2GxlW8kjoOyfMNnkch_EJUl8pg78AodOvgh_SMkNU0NvUuIHVpgfyGQkKNs3lUwy"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="aspect-square relative group overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Instagram post showing table arrangement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtJUl50UPgbcqeE69Obx748g3-v0668riNPbndCJcxmTyVHoJ5VVlbUfEdkf0rz1M4a7gm5iUs6SqCzOmor86K55JA0U2mQcZX4AzoOgah3t2eiZqMOGMS3Wo0iQcY5K8_i3QXmSNuBNcEclUO-yLZ6VTRNbrwHGNR7-vufF4zh7bcm9Hrh9kg1-pccNLkZp3x4q_dG2sdPk6KY8f5HbaZpOfQtJvdBBFrcioIyZtntDq41jL1cAtDXL9uA6aXatthuZ_1XVGbz6co"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="aspect-square relative group overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Instagram post showing smiling guests" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCab4wz4jVCpGVKktFKbBPkAsyQTGwpgs3HAniBn9uVdF_V9KeNkTksCitxZe0jS158KquWnS8FTMXyLICIrtLaeo4qPGGgpnmUTJ-nTPpDDY3WiaPtCIhe7BMRI7DRNmbXKxwS0eBDnio4S2B6ZhhQKOlo0NeEx1UzcnYLFgVSYrMeQfK7oMM61g4XbHJqCt9oJipHyayNes4ESdGSod4kqrXNXkTad65x6Jkt67pwdaw4TlZdWUhp9iyjvlaT-59ebT2xq3ThYze9"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="aspect-square relative group overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Instagram post showing appetizers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV8-zUuApZ_A_LQh64KWEw6k4JXwzyUC9uUc01Jc6tjBp4q7kgebuLA2LI1Y5tmV7maDxDsNMoni7g33nBZFs1XTtXjdDZCkvNSBshahwA6HIoC9yAQP2SXYpVBCqQf7sFo9E1MNvatj1L8j-NokvGT0KPt8u_ywBR_19Kgt4iMyA_tCVmVyJ6btRCgDVF5HGWgMHOUL2Kz6yDTlHSXWdGolN-WfG6S1YU56UrINKkZzBM7YbTkRjA8ka8uE3Gvv5tE2mXiqL0MWls"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="aspect-square relative group overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Instagram post showing restaurant lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCADGaz4FlsMkG6K6Yyg5GqROPKrPmHfdR_JT8Of5LhSuKBTSYXBYUVZXvfIrnbLCjcsZeD9UpXZTz6MgF-fmMkY8cCZg1IMobW-ts3nh90M04ND22OWFpCCk68ZcxmgHgkPb-0gpUqC5AFay4jdCOtf5BWad_qYcggLnIyYvcAkZtKRrvFGaYOVwm5L3ksqrYb37EUOm3sIphi22hvMwCK2WaZ_q5KlxH3jw5qX9sX0PXlGVtxtvqbKjIDIjT4yA3dPbq5Vs69tzyt"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dual-Action Footer Banner -->
+<section class="bg-primary py-20 px-6 lg:px-20 overflow-hidden relative">
+<!-- Decorative Pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="grid grid-cols-12 h-full w-full">
+<div class="border-r border-background-dark h-full"></div>
+<div class="border-r border-background-dark h-full"></div>
+<div class="border-r border-background-dark h-full"></div>
+<div class="border-r border-background-dark h-full"></div>
+<div class="border-r border-background-dark h-full"></div>
+<div class="border-r border-background-dark h-full"></div>
+<div class="border-r border-background-dark h-full"></div>
+<div class="border-r border-background-dark h-full"></div>
+<div class="border-r border-background-dark h-full"></div>
+<div class="border-r border-background-dark h-full"></div>
+<div class="border-r border-background-dark h-full"></div>
+<div class="border-r border-background-dark h-full"></div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
+<div class="space-y-4">
+<h2 class="text-4xl md:text-5xl font-bold text-background-dark tracking-tight leading-tight">Ready to create your <br/>own memories?</h2>
+<p class="text-background-dark/80 text-lg max-w-lg">Whether it's an intimate dinner or a grand celebration, we are here to make it exceptional.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-background-dark text-primary px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                            Book a Table
+                        </button>
+<button class="bg-transparent border-2 border-background-dark text-background-dark px-8 py-4 rounded-lg font-bold text-lg hover:bg-background-dark hover:text-white transition-all transform hover:-translate-y-1">
+                            Inquire for Events
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Consistent with theme) -->
+<footer class="bg-background-dark border-t border-white/5 py-12 px-6 lg:px-20">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+<div class="space-y-6">
+<div class="flex items-center justify-center md:justify-start gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+<h2 class="text-white text-xl font-bold tracking-tight">Prime Restaurant</h2>
+</div>
+<p class="text-gray-500 text-sm leading-relaxed">Defining culinary excellence and luxury experiences in the heart of the city since 1995.</p>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold uppercase tracking-widest text-xs">Quick Links</h4>
+<ul class="space-y-3 text-gray-500 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Our Menu</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Private Dining</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Banquets</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold uppercase tracking-widest text-xs">Opening Hours</h4>
+<ul class="space-y-3 text-gray-500 text-sm">
+<li>Mon - Thu: 11am - 10pm</li>
+<li>Fri - Sat: 11am - 12am</li>
+<li>Sunday: 10am - 9pm</li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold uppercase tracking-widest text-xs">Contact Us</h4>
+<ul class="space-y-3 text-gray-500 text-sm">
+<li class="flex items-center justify-center md:justify-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                        123 Luxury Avenue, Metropolis
+                    </li>
+<li class="flex items-center justify-center md:justify-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm">call</span>
+                        +1 (555) 123-4567
+                    </li>
+<li class="flex items-center justify-center md:justify-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+                        concierge@primerestaurant.com
+                    </li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+<p class="text-gray-600 text-xs">© 2024 Prime Restaurant &amp; Banquet. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-gray-600 hover:text-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-gray-600 hover:text-primary" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-gray-600 hover:text-primary" href="#"><span class="material-symbols-outlined">thumb_up</span></a>
+</div>
+</div>
+</footer>
+<!-- Lightbox Modal (Simplified Template) -->
+<div class="fixed inset-0 z-[100] bg-background-dark/98 flex-col items-center justify-center hidden" id="lightbox">
+<button class="absolute top-10 right-10 text-white hover:text-primary">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<button class="absolute left-10 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-6xl">chevron_left</span>
+</button>
+<div class="max-w-5xl max-h-[70vh] w-full px-6 flex flex-col items-center gap-8">
+<img class="w-full h-full object-contain rounded-lg" data-alt="Gourmet dish in lightbox view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJSL24f0DCd8Wpany6K3KhqiqSdWJl-C4JCgMNuPoz4Z8aWEmIOid12Ux0jnTNGz3ew8235I7csdapLcmKhYvr4TPESS7WgC7393YSvND0d2lAjK95pVKLVNLc2an6VdSFIQtJ8H2LljlbORS4XWikpbVuAoeyRUZIAt7-NQm3dldBrjWMEPqJhP_3fjGvOI4V0AKn-jbU8_Xo32GhKdZBPx4ymERDD0lBKU5YQ3JVg14zOoADal1wJfGXo2tlQhwEeY2auNSEsQQW"/>
+<div class="text-center space-y-2">
+<h3 class="text-2xl font-bold text-white">Signature Sea Bass</h3>
+<p class="text-gray-400">Pan-seared Mediterranean Sea Bass with roasted heirloom vegetables and lemon-caper reduction.</p>
+</div>
+</div>
+<button class="absolute right-10 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-6xl">chevron_right</span>
+</button>
+</div>
+</body></html>

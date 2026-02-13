@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Menu | Prime Restaurant &amp; Banquet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35", // Gold
+                        "navy-deep": "#000033",
+                        "navy-light": "#0a0a45",
+                        "ivory": "#f8f7f6",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#000033",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #000033;
+            color: #f8f7f6;
+        }
+        .gold-underline {
+            position: relative;
+        }
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #d4af35;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #000033;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d4af35;
+            border-radius: 10px;
+        }
+        .sticky-nav-active {
+            border-bottom: 2px solid #d4af35;
+            color: #d4af35;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-navy-deep dark:text-ivory selection:bg-primary/30">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-navy-deep/95 backdrop-blur-md border-b border-primary/20">
+<div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">restaurant</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight text-ivory">Prime Restaurant <span class="text-primary">&amp;</span> Banquet</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary/80">The Royal Dining Experience</p>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-primary" href="menu.html">Menu</a>
+<a class="hover:text-primary transition-colors" href="booking.html">Reservations</a>
+<a class="hover:text-primary transition-colors" href="banquet.html">Banquet</a>
+<a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+<a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center gap-2 bg-primary text-navy-deep px-6 py-2 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-sm">event_seat</span>
+                    Book a Table
+                </button>
+<div class="relative group cursor-pointer">
+<span class="material-symbols-outlined text-3xl text-primary">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-white text-navy-deep text-[10px] font-bold h-5 w-5 rounded-full flex items-center justify-center border-2 border-navy-deep">3</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[450px] flex items-center justify-center mt-20">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Dark luxury restaurant interior with gold lighting" style="background-image: linear-gradient(to bottom, rgba(0,0,51,0.8), rgba(0,0,51,0.9)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCx8kJzSHEz8Gy3O_X1oMv96fR3tXXelfsLPIVruhbFfSNpH-I6RqnfY4zpJ8la9FFH1S5qxj5C_bt9XtbM9Lsto6UbVjgL8BT9nZsstIZg7NbWXNdN_bWuPxcvYTWsMPybMfoQj2bJewgltcuk8P0WWoA033aQD72fUzutll2e78QJD14vSBNSkyUNVN1DrbXf-Fzexvte82nN2U8PW21UkbtRgvWC34s4teXwK4xs_RXqusDRSQulgIeUIY4-EjKHa_kjr4s4Ih4X');"></div>
+<div class="relative text-center px-4 max-w-4xl">
+<nav class="flex justify-center gap-2 text-primary/80 text-sm mb-6 font-medium">
+<a class="hover:text-primary" href="index.html">Home</a>
+<span>&gt;</span>
+<span class="text-ivory">Menu</span>
+</nav>
+<h2 class="text-5xl md:text-6xl font-bold mb-8 gold-underline italic">🍽️ Our Food Menu</h2>
+<p class="text-xl md:text-2xl text-ivory/90 font-light tracking-wide">Authentic Punjabi &amp; Chinese Multi-Cuisine in Kadi</p>
+</div>
+</section>
+<!-- Sticky Category Navigation -->
+<nav class="sticky top-20 z-40 bg-navy-light/95 backdrop-blur-md border-b border-primary/10 shadow-xl overflow-x-auto no-scrollbar">
+<div class="max-w-7xl mx-auto px-4 flex items-center justify-start md:justify-center gap-2 md:gap-8 h-16 whitespace-nowrap">
+<button class="px-4 py-5 text-sm font-semibold sticky-nav-active hover:text-primary transition-all">Soups</button>
+<button class="px-4 py-5 text-sm font-semibold text-ivory/60 hover:text-primary transition-all">Starters</button>
+<button class="px-4 py-5 text-sm font-semibold text-ivory/60 hover:text-primary transition-all">Chinese Main</button>
+<button class="px-4 py-5 text-sm font-semibold text-ivory/60 hover:text-primary transition-all">Punjabi Main</button>
+<button class="px-4 py-5 text-sm font-semibold text-ivory/60 hover:text-primary transition-all">Paneer Special</button>
+<button class="px-4 py-5 text-sm font-semibold text-ivory/60 hover:text-primary transition-all">Tandoor</button>
+<button class="px-4 py-5 text-sm font-semibold text-ivory/60 hover:text-primary transition-all">Rice</button>
+<button class="px-4 py-5 text-sm font-semibold text-ivory/60 hover:text-primary transition-all">Breads</button>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-4 py-16 flex gap-8">
+<!-- Menu Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Menu Card 1 -->
+<div class="bg-navy-light rounded-xl overflow-hidden border border-primary/10 hover:border-primary/40 transition-all group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Veg Manchow Soup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Hot manchow soup with crispy noodles on top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOpeLvm-1NJUjZINVfUBa9I_tNjheNLh0zgrTlccagLnBjrf7cXEgPaUpxzwI9Pmv8MwiRTGll3g2ZW35HHlYsbsjHkIIXEWL17DCZ1S_8ePrXtH3bu7GyUzGDHQmMpDOPzX1uZfQKWRBCvH187O10zFYFvo6es2KLzNgJZFB0rRpH9Btob_ANh8ls65VOoG4RgFPNIQXvq24vYyd5nSzLZzLKDcTUUdBYrW0kK-3dL8klR4UoFlgC-KGaxI2fZP2pWWLN2YdLKWDS"/>
+<div class="absolute top-3 right-3 bg-navy-deep/80 backdrop-blur-md text-primary px-3 py-1 rounded-full text-xs font-bold border border-primary/30">300ml</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-xl font-bold text-ivory">Veg. Manchow Soup</h3>
+<span class="text-primary font-bold text-lg">₹160</span>
+</div>
+<p class="text-primary/70 text-xs font-medium mb-3">વેજ મંચાઉ સૂપ</p>
+<p class="text-ivory/60 text-sm line-clamp-2 mb-6">A spicy and hot soup made with mixed vegetables, garnished with crispy fried noodles.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center bg-navy-deep rounded-lg border border-primary/20">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-l-lg transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-3 text-sm font-bold">1</span>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-r-lg transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="bg-primary/10 border border-primary text-primary px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-navy-deep transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_cart</span> Add
+                            </button>
+</div>
+</div>
+</div>
+<!-- Menu Card 2 -->
+<div class="bg-navy-light rounded-xl overflow-hidden border border-primary/10 hover:border-primary/40 transition-all group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Paneer Butter Masala" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Rich red paneer butter masala in a ceramic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBha8m-zihJoAKHmVCtSaEEmkrOR3r0yOqbW65tVxCrYSPwZNvZ8yZfr45oCuSaGYvZMp2pcPWtmqIicee84g7vtLFjl5cS-GRw4FZnHpodD9EMEU9nn8vNvAfiRuRlktU7iJbZo9bx7pe6saVvDtdJsfa6QhUntLlCouPxmZkJQXnu7UffBZgJwR5vragdjVuP8OfNUrvX9PcAaCgfZuORimLvnFK19xrGIjBsJohWHNwKvxFcTd1UhEcIYeq9aR_7NfETxiAI8cHB"/>
+<div class="absolute top-3 right-3 bg-navy-deep/80 backdrop-blur-md text-primary px-3 py-1 rounded-full text-xs font-bold border border-primary/30">400gm</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-xl font-bold text-ivory">Paneer Butter Masala</h3>
+<span class="text-primary font-bold text-lg">₹320</span>
+</div>
+<p class="text-primary/70 text-xs font-medium mb-3">પનીર બટર મસાલા</p>
+<p class="text-ivory/60 text-sm line-clamp-2 mb-6">Chunks of fresh cottage cheese cooked in a rich, creamy tomato and butter gravy.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center bg-navy-deep rounded-lg border border-primary/20">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-l-lg transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-3 text-sm font-bold">1</span>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-r-lg transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="bg-primary/10 border border-primary text-primary px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-navy-deep transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_cart</span> Add
+                            </button>
+</div>
+</div>
+</div>
+<!-- Menu Card 3 -->
+<div class="bg-navy-light rounded-xl overflow-hidden border border-primary/10 hover:border-primary/40 transition-all group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Veg Hakka Noodles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Stir fried hakka noodles with colorful vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC41B_WMaY5M_kD4SbV6ZQ3nnnvHxQMnAMUH1kF9MGevKC0juAUttDpnLkjGCtDoeaRYr1WLC1694ZkRzh_XhS8nxyXkWIDHXMBPgllfkQGUobQAH0coed20xdKqnBjHceZW3I-1NSJb48XhMldi57p-ShOzyccVNmshtt7-DmuKvvME3uHxeUaDx-binKzUz1DJMx1hBhezIY_6tKK00NsjBQPAErHwirxBz0ChiwqXUVGOua7EjiTYDNg70refCkar7F8-Ui27uVG"/>
+<div class="absolute top-3 right-3 bg-navy-deep/80 backdrop-blur-md text-primary px-3 py-1 rounded-full text-xs font-bold border border-primary/30">350gm</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-xl font-bold text-ivory">Veg. Hakka Noodles</h3>
+<span class="text-primary font-bold text-lg">₹240</span>
+</div>
+<p class="text-primary/70 text-xs font-medium mb-3">વેજ હક્કા નૂડલ્સ</p>
+<p class="text-ivory/60 text-sm line-clamp-2 mb-6">Classic Indo-Chinese noodles tossed with garden fresh vegetables and soy sauce.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center bg-navy-deep rounded-lg border border-primary/20">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-l-lg transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-3 text-sm font-bold">1</span>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-r-lg transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="bg-primary/10 border border-primary text-primary px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-navy-deep transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_cart</span> Add
+                            </button>
+</div>
+</div>
+</div>
+<!-- Menu Card 4 -->
+<div class="bg-navy-light rounded-xl overflow-hidden border border-primary/10 hover:border-primary/40 transition-all group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Butter Naan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Fresh tandoori butter naan with herbs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRrYdjsplNA-_22J7d5WPKmfXzS2qlolQqik_hxtHqTwwj6gU7bnrK96q6RqdeenFzqetQD56ufFxg7SZyYO3896LCMGRQIVCWFwF37FbeOTASfaso4LisQpJBji3reD0GySCvNJLNN_JMmVhHidp1c7T8cOTakGOK296XI4RBRMKnlCM8czjBM_29eGUhEg35fDUQ40OEkCVx-JgBb1hitsP-2fCXagDwIN0e2cLsUqsMX5GqXJu9G7a3bqhp0nipQGcZnPFFcImc"/>
+<div class="absolute top-3 right-3 bg-navy-deep/80 backdrop-blur-md text-primary px-3 py-1 rounded-full text-xs font-bold border border-primary/30">1 Piece</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-xl font-bold text-ivory">Butter Naan</h3>
+<span class="text-primary font-bold text-lg">₹60</span>
+</div>
+<p class="text-primary/70 text-xs font-medium mb-3">બટર નાન</p>
+<p class="text-ivory/60 text-sm line-clamp-2 mb-6">Soft and fluffy leavened bread cooked in a clay oven, smothered in premium butter.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center bg-navy-deep rounded-lg border border-primary/20">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-l-lg transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-3 text-sm font-bold">2</span>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-r-lg transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="bg-primary/10 border border-primary text-primary px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-navy-deep transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_cart</span> Add
+                            </button>
+</div>
+</div>
+</div>
+<!-- Menu Card 5 -->
+<div class="bg-navy-light rounded-xl overflow-hidden border border-primary/10 hover:border-primary/40 transition-all group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Veg Biryani" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Aromatic vegetable biryani with saffron rice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSO52owAr0z7MddOhXZXRM8QtLXCxTlaU-0maKB4ziCNsPDEFInU_QOoQF_sgYCBccxgPm77Yi_3je2arjibAjgMdYO-I8Abi5RPNbUOgKbrXDThmWjxBAQJxemKV7nW_CLzUpdyZvImYOcojqeQvwWLq4YxwmHQSMXOSvRGm-zkSFj7KQnDa4rahMvMY4cwvhFAoZYUTPlY5BtTtnMuxH2AdaxiuHTGvrQ57pgzUOew1XDKgGHhDL4XBSsfSEW2XIqJlc9QF-S5bI"/>
+<div class="absolute top-3 right-3 bg-navy-deep/80 backdrop-blur-md text-primary px-3 py-1 rounded-full text-xs font-bold border border-primary/30">500gm</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-xl font-bold text-ivory">Veg. Hyderabadi Biryani</h3>
+<span class="text-primary font-bold text-lg">₹280</span>
+</div>
+<p class="text-primary/70 text-xs font-medium mb-3">વેજ હૈદરાબાદી બિરયાની</p>
+<p class="text-ivory/60 text-sm line-clamp-2 mb-6">Long-grain basmati rice layered with spicy vegetable masala, served with raita.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center bg-navy-deep rounded-lg border border-primary/20">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-l-lg transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-3 text-sm font-bold">1</span>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-r-lg transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="bg-primary/10 border border-primary text-primary px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-navy-deep transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">shopping_cart</span> Add
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Cart (Visual Representation as part of Page Flow) -->
+<aside class="hidden xl:block w-96 sticky top-40 h-fit bg-navy-light rounded-2xl border border-primary/30 shadow-2xl p-6">
+<div class="flex items-center justify-between mb-8 pb-4 border-b border-primary/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+<h3 class="text-xl font-bold text-ivory">Your Order</h3>
+</div>
+<span class="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded">3 Items</span>
+</div>
+<div class="space-y-6 mb-8 max-h-[400px] overflow-y-auto custom-scrollbar pr-2">
+<!-- Cart Item 1 -->
+<div class="flex gap-4">
+<div class="h-16 w-16 bg-navy-deep rounded-lg overflow-hidden border border-primary/10 flex-shrink-0">
+<img alt="Manchow" class="w-full h-full object-cover" data-alt="Small thumbnail of manchow soup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpsoiKxue8wbwx-yJiBS5VVC_S9hbNf9gjgvwdSbm5g1X6NvSz7Sz-CzuQRFlYz3yEXSmnrIWNRGxpHQIg9GoVvn8E_miRPCsT_gZDKxb_Wdod9Mdl9_YjFNQy4DpTmJoXO1kUqR8ndsVUSU8rpxf4FDsW8715x_KD8CJ0iXFeZE5tEhCBhRC5CNsT6AM8sGfXbMXgtuZzEw8EB4pz2OauHdbI4jVo611rtmnbTfsWY0KFA6O5eQV4P_Hwyu_leFc3SmsGnFdTPOH2"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold text-ivory">Veg. Manchow Soup</h4>
+<span class="text-primary text-sm font-bold">₹160</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex items-center text-primary/60 text-[10px] font-bold">
+<span class="material-symbols-outlined text-xs mr-1">close</span> 1
+                            </div>
+<button class="text-red-400 hover:text-red-300 transition-colors"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="flex gap-4">
+<div class="h-16 w-16 bg-navy-deep rounded-lg overflow-hidden border border-primary/10 flex-shrink-0">
+<img alt="Butter Naan" class="w-full h-full object-cover" data-alt="Small thumbnail of butter naan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfQQlQqb-tuOO3TrF7chqjWmSugR-E2P0WSKpDgPRjU-jRQsUhhnMVHRSNN4BwF53YFxvGau1TrBkqiYqUOvaEg2sA-89pgxpxlmrwEv_5LYeWdMayt0OVzNX6iGFJ27G-Sh3yECMSSlqRtqDGqCeklM8tkxVZEuMkr9UGo0fVk7n610zyDO2NuhaOUi2Lj0tq2zgxhi7Gz8Q-wpLb3YdM5DedosHbiK5CSSoL74M4blnnQc5R6lTqUs_qqHe749FXncgw-2kGaNm2"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold text-ivory">Butter Naan</h4>
+<span class="text-primary text-sm font-bold">₹120</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex items-center text-primary/60 text-[10px] font-bold">
+<span class="material-symbols-outlined text-xs mr-1">close</span> 2
+                            </div>
+<button class="text-red-400 hover:text-red-300 transition-colors"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-3 pt-6 border-t border-primary/20">
+<div class="flex justify-between text-sm">
+<span class="text-ivory/60">Subtotal</span>
+<span class="text-ivory">₹280.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-ivory/60">GST (5%)</span>
+<span class="text-ivory">₹14.00</span>
+</div>
+<div class="flex justify-between text-lg font-bold mt-2">
+<span class="text-ivory">Grand Total</span>
+<span class="text-primary">₹294.00</span>
+</div>
+</div>
+<div class="mt-8 space-y-3">
+<button class="w-full bg-primary text-navy-deep font-bold py-3 rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/10">Proceed to Checkout</button>
+<button class="w-full bg-navy-deep border border-primary/30 text-primary text-sm font-bold py-3 rounded-xl hover:bg-navy-light transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                    Continue Ordering
+                </button>
+</div>
+</aside>
+</main>
+<!-- Modal: Checkout Form (Overlay) -->
+<!-- Hidden by default: remove 'hidden' class to show -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-navy-deep/80 backdrop-blur-md hidden">
+<div class="bg-navy-light w-full max-w-lg rounded-2xl border border-primary/40 shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-primary"></div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-2xl font-bold text-ivory flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">shopping_cart_checkout</span>
+                        Order Details
+                    </h3>
+<button class="text-ivory/60 hover:text-ivory"><span class="material-symbols-outlined">close</span></button>
+</div>
+<form class="space-y-5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary/80 uppercase tracking-widest px-1">Full Name</label>
+<input class="w-full bg-navy-deep border-primary/20 rounded-xl focus:ring-primary focus:border-primary text-ivory placeholder:text-ivory/20" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary/80 uppercase tracking-widest px-1">Mobile Number</label>
+<input class="w-full bg-navy-deep border-primary/20 rounded-xl focus:ring-primary focus:border-primary text-ivory placeholder:text-ivory/20" placeholder="+91 98765 43210" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary/80 uppercase tracking-widest px-1">Order Type</label>
+<div class="grid grid-cols-3 gap-3">
+<button class="bg-primary text-navy-deep py-3 rounded-xl font-bold text-sm" type="button">Dine-In</button>
+<button class="bg-navy-deep border border-primary/20 text-ivory/60 py-3 rounded-xl font-bold text-sm hover:border-primary/50" type="button">Takeaway</button>
+<button class="bg-navy-deep border border-primary/20 text-ivory/60 py-3 rounded-xl font-bold text-sm hover:border-primary/50" type="button">Delivery</button>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary/80 uppercase tracking-widest px-1">Table Number (For Dine-In)</label>
+<select class="w-full bg-navy-deep border-primary/20 rounded-xl focus:ring-primary focus:border-primary text-ivory">
+<option>Table No. 1</option>
+<option>Table No. 2</option>
+<option>Table No. 3</option>
+<option>Table No. 4</option>
+<option>V.I.P Cabin</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary/80 uppercase tracking-widest px-1">Cooking Instructions / Notes</label>
+<textarea class="w-full bg-navy-deep border-primary/20 rounded-xl focus:ring-primary focus:border-primary text-ivory placeholder:text-ivory/20" placeholder="e.g. Make it extra spicy, No onions..." rows="3"></textarea>
+</div>
+<div class="pt-4 border-t border-primary/20 mt-8 flex flex-col items-center">
+<button class="w-full bg-primary text-navy-deep font-bold py-4 rounded-xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3" type="submit">
+<span class="material-symbols-outlined">shopping_bag</span>
+                            Place Order - ₹294.00
+                        </button>
+<p class="mt-4 text-[10px] text-ivory/40 text-center">By placing your order, you agree to our terms of service and dining policies.</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Mobile Bottom Cart Bar -->
+<div class="xl:hidden fixed bottom-0 left-0 w-full bg-navy-light border-t border-primary/30 p-4 z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<span class="material-symbols-outlined text-3xl text-primary">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-white text-navy-deep text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">3</span>
+</div>
+<div>
+<p class="text-[10px] text-ivory/60 uppercase font-bold tracking-tighter">Total Amount</p>
+<p class="text-lg font-bold text-primary leading-none">₹294.00</p>
+</div>
+</div>
+<button class="bg-primary text-navy-deep px-8 py-3 rounded-xl font-bold text-sm shadow-lg shadow-primary/20">View Cart</button>
+</div>
+</div>
+<footer class="bg-navy-deep border-t border-primary/10 py-12 pb-32 xl:pb-12 text-center">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-primary mb-4 flex justify-center">
+<span class="material-symbols-outlined text-4xl">restaurant</span>
+</div>
+<h4 class="text-xl font-bold mb-2">Prime Restaurant &amp; Banquet</h4>
+<p class="text-ivory/60 text-sm mb-8">Kadi-Ahmedabad Road, Kadi, Gujarat - 382715</p>
+<div class="flex justify-center gap-6 mb-8">
+<a class="text-ivory/40 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-ivory/40 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+<a class="text-ivory/40 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+<p class="text-[10px] text-ivory/20 uppercase tracking-widest">© 2024 Prime Restaurant &amp; Banquet. All Rights Reserved.</p>
+</div>
+</footer>
+</body></html>

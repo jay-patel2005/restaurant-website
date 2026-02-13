@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prime Restaurant &amp; Banquet | Luxury Dining in Kadi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0a0c14", // Deep Navy variation
+                        "accent-navy": "#141a2b",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Work Sans", sans-serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af35 0%, #f1d279 50%, #d4af35 100%);
+        }
+        .navy-gradient {
+            background: linear-gradient(180deg, #0a0c14 0%, #141a2b 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="fixed top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+<nav class="mx-auto flex max-w-7xl items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-background-dark">
+<span class="material-symbols-outlined font-bold">restaurant</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-white">PRIME <span class="text-primary">RESTAURANT</span></span>
+</div>
+<div class="hidden items-center gap-8 lg:flex">
+<a class="text-sm font-medium text-white hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="menu.html">Menu</a>
+<a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="booking.html">Reservations</a>
+<a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="banquet.html">Banquet</a>
+<a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+<a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-background-dark transition-transform hover:scale-105 active:scale-95">
+                        Book a Table
+                    </button>
+<button class="lg:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Hero Section -->
+<main class="flex-grow pt-20">
+<section class="relative h-[90vh] min-h-[600px] w-full overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="h-full w-full object-cover" data-alt="Luxury restaurant interior with golden lighting and elegant furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6j8od8wkdLLvGoYD85lRcV3vg_MAR9ZV4cFIkqxhOYwvbuZz-jEDFFRa83J1gTbZcruAsTuxr0fXED_4WpvklTaLdh3JQRVL4YjFJdfKNF7KhCQ1no9_ghqwRcrNAFwaaOKS8wsrscKXIwQrZDcBEXRCSTYggUt8syuGpO9wMmuDRwKNAJ5be7XEk_IZiZWweQanY3lb1v9aKuIY5Puwy7rW7wu6IzuFrKYAL4jh2-0k-xsHc_jgM3XSXBamf2lw7WXWCR0ZCwJvc"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/70 to-transparent"></div>
+</div>
+<div class="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-6 md:px-20">
+<div class="max-w-2xl space-y-6">
+<div class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-widest text-primary">
+<span class="relative flex h-2 w-2">
+<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
+</span>
+                            Now Open in Kadi
+                        </div>
+<h1 class="text-5xl font-black leading-tight text-white md:text-7xl">
+                            Prime Restaurant <br/> &amp; <span class="text-primary italic">Banquet</span>
+</h1>
+<p class="text-lg text-slate-300 md:text-xl">
+                            Experience the finest Punjabi &amp; Chinese multi-cuisine dining in an atmosphere of unparalleled luxury and elegance.
+                        </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="flex min-w-[160px] items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-base font-bold text-background-dark transition-all hover:bg-white">
+<span class="material-symbols-outlined">calendar_today</span>
+                                Book a Table
+                            </button>
+<button class="flex min-w-[160px] items-center justify-center gap-2 rounded-lg border border-primary/50 bg-white/5 px-8 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:bg-primary/20">
+<span class="material-symbols-outlined">menu_book</span>
+                                View Menu
+                            </button>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+<span class="material-symbols-outlined">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Quick Info Bar -->
+<section class="border-y border-white/5 bg-accent-navy py-8">
+<div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 md:grid-cols-3 md:px-20">
+<div class="flex items-start gap-4">
+<div class="rounded-full bg-primary/20 p-3 text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-white">Find Us</h4>
+<p class="text-sm text-slate-400">Heritage Plaza, Detroj Rd, Kadi</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="rounded-full bg-primary/20 p-3 text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h4 class="font-bold text-white">Open Hours</h4>
+<p class="text-sm text-slate-400">11:00 AM – 3:00 PM | 6:00 PM – 10:30 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="rounded-full bg-primary/20 p-3 text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-bold text-white">Reservations</h4>
+<p class="text-sm text-slate-400">+91 96014 88045</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-24 px-6 md:px-20">
+<div class="mx-auto max-w-7xl">
+<div class="mb-16 text-center">
+<h2 class="text-primary font-display font-semibold uppercase tracking-widest text-sm mb-4">The Prime Experience</h2>
+<h3 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">World-Class Amenities</h3>
+<p class="text-slate-400 max-w-2xl mx-auto text-lg">We combine traditional hospitality with modern luxury to create unforgettable dining moments for you and your family.</p>
+</div>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+<div class="group relative overflow-hidden rounded-xl border border-white/5 bg-accent-navy p-8 transition-all hover:border-primary/50">
+<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl">music_note</span>
+</div>
+<h4 class="mb-3 text-xl font-bold text-white">Live Music</h4>
+<p class="text-slate-400">Immerse yourself in soulful melodies and live performances that elevate your dining experience every evening.</p>
+<div class="absolute bottom-0 right-0 h-24 w-24 translate-x-12 translate-y-12 rounded-full bg-primary/5"></div>
+</div>
+<div class="group relative overflow-hidden rounded-xl border border-white/5 bg-accent-navy p-8 transition-all hover:border-primary/50">
+<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl">accessible</span>
+</div>
+<h4 class="mb-3 text-xl font-bold text-white">Wheelchair Accessible</h4>
+<p class="text-slate-400">Our facilities are designed to be fully accessible, ensuring every guest enjoys a comfortable and inclusive visit.</p>
+<div class="absolute bottom-0 right-0 h-24 w-24 translate-x-12 translate-y-12 rounded-full bg-primary/5"></div>
+</div>
+<div class="group relative overflow-hidden rounded-xl border border-white/5 bg-accent-navy p-8 transition-all hover:border-primary/50">
+<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl">local_parking</span>
+</div>
+<h4 class="mb-3 text-xl font-bold text-white">Free Parking</h4>
+<p class="text-slate-400">Convenient and secure parking space for all our restaurant and banquet guests within the plaza premises.</p>
+<div class="absolute bottom-0 right-0 h-24 w-24 translate-x-12 translate-y-12 rounded-full bg-primary/5"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Venue Gallery / Visual Mosaic -->
+<section class="bg-accent-navy py-24 px-6 md:px-20">
+<div class="mx-auto max-w-7xl">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<h3 class="text-4xl font-bold text-white leading-tight">Magnificent Venue for <br/><span class="text-primary">Your Special Moments</span></h3>
+<p class="text-slate-400 text-lg">Whether it's an intimate dinner or a grand wedding celebration, our versatile spaces cater to every occasion with style and sophistication.</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-slate-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Luxury Banquet Hall for up to 500 guests
+                                </li>
+<li class="flex items-center gap-3 text-slate-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Premium Punjabi &amp; Chinese Catering
+                                </li>
+<li class="flex items-center gap-3 text-slate-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    State-of-the-art Sound &amp; Lighting
+                                </li>
+</ul>
+<div class="pt-4">
+<button class="rounded-lg border-2 border-primary px-8 py-3 font-bold text-primary transition-all hover:bg-primary hover:text-background-dark">
+                                    Inquire for Events
+                                </button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<img class="w-full aspect-[4/5] object-cover rounded-xl shadow-2xl" data-alt="Modern interior of a luxury dining hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCj6tk7mBIYZBmnc45eRtSkgZFVumOZgfU9g_X_prM27Dn96HLI4KcZaDD5aXmzD_mfQahJwuSaFxjprqW7QvoY2O26Cb4ZSQ5TdebEgukOwW1ppKMEfVF1U2ucybotVYgEuQ100RE9dbSuUaowgnNwmhLc94_74S90XwBQXAHfgzv6UjEbKSJQOJ4Aiaid1jd9jzV1P9lsWS4jnQ8DCM06wGScM_2gEnoTGxCgEE5QpnkITrOo8-HtfRMaJlu0ct62TBddoWR0Nj0"/>
+<img class="w-full aspect-square object-cover rounded-xl shadow-2xl" data-alt="Exotic Chinese dish plating" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCscwWLANkVEBu0G0C2dmTzvTN_baGapA9b-nCIt9lB9AceMhj5FdZxCcpPRRzVt1_z_nmLKq7xgAKp181RZTPP2iTsThP44zkJDUNswisBh4HiL3rQXLobnpvE1HsipEzQjnCdFxOc4_DR2u2Cjkyg019URaVlilDl3W7P-9sDIBpVbgz8blhHxQrC5jTzFXNkbqhSWAIxjs4_ZOyy0LpahqtAP4nYSKl_sS_CjwnX6Xd9fp9FA-S6fA8KVQgAiXBIj_jp1_Yf2ahP"/>
+</div>
+<div class="space-y-4 pt-12">
+<img class="w-full aspect-square object-cover rounded-xl shadow-2xl" data-alt="Traditional Punjabi food spread" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUq5z2hZsPiqQjyK-OGYwSE1Q1DpvI6cwh8eTS53lzx378dtac6mQ-rg5skoqRxBBc6FmGytWfqjOd2sQay5XDjxKWTpNEmETqkHS54lbus2UvDveKlYc4FKXpMwoiaTNxxqngLVtlrapHs8k2vkwXEZppedG49AXutx4JADPaVM9P5Illd5_l6_RfCmtpxBxhyM9YON8jPdaPs1NIEs08ZBBBJazN-vyHrHG_M3kua_5vduquvAWjQ6bpfty0psmAZN4Mn-1RL_am"/>
+<img class="w-full aspect-[4/5] object-cover rounded-xl shadow-2xl" data-alt="Grand exterior view of Heritage Plaza" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXljFD8zV5mGjMhPdvjWVandylrpQTkbTh4068g51bQV6go0l0YQ4fMk38Upix6sEwp1OUYPR49gjBIM-RASTEbVLolHd86mKEYy-kSryqY_vabRe6qnBU8kc2_S5enSG4Z4Zi3_tmVEINIlL59k3hLCGmxzq4VMrBr5VvBtu8Y_EjL72JepWY_Ok9ZHBpvNvpCR18n47BB7AxUUILhDAb7kehhEpbrA-d4zJ21kOqsMs0P7IsRzWPeSUgjFpOT1tvYaivJHlhN_JT"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Banner -->
+<section class="relative py-20 overflow-hidden">
+<div class="absolute inset-0 bg-primary"></div>
+<div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl"></div>
+<div class="relative z-10 mx-auto max-w-7xl px-6 text-center md:px-20">
+<h3 class="mb-6 text-3xl font-black text-background-dark md:text-5xl">Ready to Taste Perfection?</h3>
+<p class="mb-10 text-lg font-medium text-background-dark/80">Book your table today and discover why we're Kadi's favorite multi-cuisine destination.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="rounded-lg bg-background-dark px-10 py-4 text-lg font-bold text-primary shadow-xl transition-all hover:scale-105 active:scale-95">
+                            Reserve Now
+                        </button>
+<button class="rounded-lg border-2 border-background-dark px-10 py-4 text-lg font-bold text-background-dark transition-all hover:bg-background-dark hover:text-white">
+                            View Menu
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-dark border-t border-white/5 pt-20 pb-10 px-6 md:px-20">
+<div class="mx-auto max-w-7xl">
+<div class="grid grid-cols-1 gap-12 md:grid-cols-4">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-background-dark">
+<span class="material-symbols-outlined font-bold">restaurant</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-white">PRIME <span class="text-primary">RESTAURANT</span></span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">
+                            A culinary journey through Punjab and China, served with royal hospitality and unmatched luxury in the heart of Kadi.
+                        </p>
+<div class="flex gap-4">
+<a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-primary hover:text-background-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">social_leaderboard</span>
+</a>
+<a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-primary hover:text-background-dark transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold uppercase tracking-wider">Quick Links</h4>
+<ul class="space-y-3 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Food Menu</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Banquet Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gallery</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold uppercase tracking-wider">Operating Hours</h4>
+<div class="space-y-4">
+<div>
+<p class="text-primary text-sm font-bold">Lunch</p>
+<p class="text-slate-400 text-sm">11:00 AM – 3:00 PM</p>
+</div>
+<div>
+<p class="text-primary text-sm font-bold">Dinner</p>
+<p class="text-slate-400 text-sm">6:00 PM – 10:30 PM</p>
+</div>
+<p class="text-slate-500 text-xs italic">Open All 7 Days</p>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold uppercase tracking-wider">Get In Touch</h4>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+<span>Heritage Plaza, Detroj Rd,<br/>Kadi, Gujarat 382715</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<a class="hover:text-primary transition-colors" href="tel:+919601488045">+91 96014 88045</a>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<a class="hover:text-primary transition-colors" href="mailto:info@primerestaurant.com">info@primerestaurant.com</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-20 border-t border-white/5 pt-8 text-center text-slate-500 text-xs">
+<p>© 2024 Prime Restaurant &amp; Banquet Hall. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

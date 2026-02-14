@@ -62,12 +62,30 @@
 <button class="hidden md:flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-background-dark transition-transform hover:scale-105 active:scale-95">
                         Book a Table
                     </button>
-<button class="lg:hidden text-white">
+<button id="mobile-menu-btn" class="lg:hidden text-white">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </nav>
-</header>
+        </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-background-dark/95 backdrop-blur-xl transform transition-transform duration-300 translate-x-full lg:hidden flex flex-col items-center justify-center space-y-8">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-white hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+            
+            <nav class="flex flex-col items-center gap-8">
+                <a class="text-2xl font-display font-medium text-white hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="text-2xl font-display font-medium text-white hover:text-primary transition-colors" href="menu.html">Menu</a>
+                <a class="text-2xl font-display font-medium text-white hover:text-primary transition-colors" href="booking.html">Reservations</a>
+                <a class="text-2xl font-display font-medium text-white hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+            </nav>
+
+            <a href="booking.html" class="flex items-center justify-center rounded-lg bg-primary px-8 py-3 text-lg font-bold text-background-dark transition-transform hover:scale-105 active:scale-95">
+                Book a Table
+            </a>
+        </div>
 <!-- Hero Section -->
 <main class="flex-grow pt-20">
 <section class="relative h-[90vh] min-h-[600px] w-full overflow-hidden">
@@ -304,4 +322,30 @@
 </div>
 </footer>
 </div>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            const isHidden = mobileMenu.classList.contains('translate-x-full');
+            if (isHidden) {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMenu();
+            });
+        });
+    </script>
 </body></html>
